@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Auto Note",
+    "version": "1.1",
+    "description": "Auto-fills a custom message when connecting on LinkedIn.",
+    "permissions": ["storage", "scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/in/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
