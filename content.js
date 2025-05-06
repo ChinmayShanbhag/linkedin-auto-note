@@ -39,10 +39,7 @@ function initAutoNote() {
     const noteBox = document.querySelector('textarea[name="message"]');
 
     if (noteBox && storedFirstName && !noteBox.value) {
-      const message = `Hi ${storedFirstName}, 
-I’m expanding my network and exploring potential opportunities. I’d be glad to connect and learn more about any roles that might align with my background.
-
-Looking forward to connecting!`;
+      const message = `Hi ${storedFirstName}, `;
 
       noteBox.value = message;
       noteBox.dispatchEvent(new Event('input', { bubbles: true }));
